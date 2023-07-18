@@ -1,0 +1,120 @@
+* {
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+  }
+  body {
+    background-color: black;
+    margin: 0 16px 0 16px;
+    border: 1px solid rgb(110, 118, 125);
+  }
+  
+  .wd-top-container {
+    padding-left: 16px;
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .wd-search-bar {
+    background-color: rgb(47, 51, 54);
+    height: 45px;
+    border-radius: 120px;
+    border: none;
+    flex-grow: 1;
+    font-size: 20px;
+    padding-left: 40px;
+  }
+  
+  .fa {
+    color: rgb(110, 118, 125);
+  }
+  
+  .fa-search {
+    position: absolute;
+    font-size: 24px;
+    left: 24px;
+  }
+  
+  .fa-cog {
+    color: rgb(29, 161, 242);
+    margin: 0 13px 0 36px;
+    font-size: 28px;
+  }
+  
+  .wd-explore-tab-collection {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid rgb(110, 118, 125);
+  }
+  
+  .wd-explore-tab {
+    font-size: 16px;
+    padding: 16px;
+    text-decoration: none;
+    font-weight: 900;
+    color: rgb(110, 118, 125);
+  }
+  
+  .wd-defaultTab-selected {
+    color: rgb(29, 161, 242);
+    border-bottom: 4px solid rgb(29, 161, 242);
+  }
+  
+  .wd-gap {
+    height: 15px;
+    border-top: 1px solid rgb(122, 127, 132);
+    background-color: rgb(49, 47, 47);
+    border-bottom: 3px solid rgb(122, 127, 132);
+  }
+  
+  .wd-article {
+    padding: 20px 0 20px 10px;
+    border-bottom: 1px solid rgb(110, 118, 125);
+  }
+  
+  .wd-topic {
+    font-size: 14px;
+    color: rgb(110, 118, 125);
+  }
+  
+  .wd-tweet-count {
+    font-size: 14px;
+    color: rgb(110, 118, 125);
+  }
+  .wd-article-title {
+    font-size: 19px;
+    margin: 5px 0 5px 0;
+    color: white;
+  }
+  .wd-open-article {
+    color: white;
+    float: right;
+    padding-right: 16px;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  .wd-open-topic {
+    color: rgb(110, 118, 125);
+    float: right;
+    padding-right: 16px;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  .wd-article-image {
+    height: 100px;
+    width: 100px;
+    margin-right: 16px;
+    border-radius: 25px;
+  }
+  .wd-official-handle-name {
+    color: white;
+    font-size: 14px;
+    font-weight: bolder;
+  }
+  .wd-article-image-container {
+    display: flex;
+    justify-content: space-between;
+  }

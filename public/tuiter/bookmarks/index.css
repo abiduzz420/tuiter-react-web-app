@@ -1,0 +1,131 @@
+* {
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+  }
+  :root {
+    --light-gray-color: rgb(110, 118, 125);
+  }
+  body {
+    background-color: black;
+    margin: 0 16px 0 16px;
+    border: 1px solid lightgrey;
+    border-bottom: auto;
+    height: auto;
+    width: auto;
+  }
+  .wd-bookmarks-heading {
+    padding-left: 16px;
+    border-bottom: 1px solid gray;
+  }
+  .wd-title {
+    margin: 10px 0 2px 0;
+    color: white;
+    font-size: 20px;
+    font-weight: bolder;
+  }
+  .wd-title-name {
+    color: lightgrey;
+    font-size: 13px;
+    padding-bottom: 12px;
+  }
+  .wd-bookmark-avatar {
+    margin-top: 12px;
+    height: 48px;
+    border-radius: 50%;
+    width: 48px;
+  }
+  .wd-bookmark-article-container {
+    padding-left: 16px;
+    display: flex;
+    border-bottom: 1px solid lightgrey;
+    display: grid;
+  }
+  
+  .wd-article-collection {
+    display: flex;
+    width: 600px;
+    border: 1px solid lightgrey;
+  }
+  
+  .wd-bookmark-avatar-container {
+    margin-left: 16px;
+    width: 48px;
+    float: left;
+  }
+  .wd-article-container {
+    width: auto;
+    margin: 15px 0 0 15px;
+    border-bottom: 1px solid gray;
+    padding-left: 65px;
+  }
+  .wd-owner-name {
+    color: white;
+    font-size: 15px;
+    font-weight: bolder;
+  }
+  .wd-owner-handle {
+    color: lightgray;
+    font-size: 15px;
+  }
+  .wd-read-more-top {
+    color: rgb(26, 145, 188);
+    float: right;
+    padding-right: 16px;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  .wd-read-more {
+    color: gray;
+    float: right;
+    padding-right: 16px;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  .wd-article-content {
+    padding-top: 10px;
+    color: white;
+    font-size: 15px;
+    max-width: 506px;
+    margin-bottom: 12px;
+  }
+  
+  .wd-article-img {
+    border-radius: 15px 15px 0 0;
+    border: 1px gray;
+    border-bottom: none;
+    display: block;
+    height: 264px;
+    width: 504px;
+    object-fit: cover;
+  }
+  .wd-lightgray {
+    color: gray;
+  }
+  .wd-article-content-inclusive {
+    width: 99.7%;
+    padding: 12px;
+    border: 1px solid gray;
+    border-top: none;
+    border-radius: 0 0 15px 15px;
+  }
+  .wd-article-iconlist {
+    display: flex;
+    padding: 12px 10px 12px 10px;
+    justify-content: space-between;
+    width: 37%;
+  }
+  .wd-article-iconlist i {
+    color: gray;
+    font-size: 13px;
+  }
+  .wd-article-iconlist .wd-like-highlight {
+    color: red;
+  }
+  
+  .wd-icon-spacing {
+    margin-right: 12px;
+  }
