@@ -1,120 +1,239 @@
-* {
-    box-sizing: border-box;
-    font-family: "Roboto", sans-serif;
-    margin: 0;
-  }
-  body {
-    background-color: black;
-    margin: 0 16px 0 16px;
-    border: 1px solid rgb(110, 118, 125);
-  }
+.search-form {
+  display: flex;
+  align-items: center;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
   
-  .wd-top-container {
-    padding-left: 16px;
-    display: flex;
-    position: relative;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .wd-search-bar {
-    background-color: rgb(47, 51, 54);
-    height: 45px;
-    border-radius: 120px;
-    border: none;
-    flex-grow: 1;
-    font-size: 20px;
-    padding-left: 40px;
-  }
-  
-  .fa {
-    color: rgb(110, 118, 125);
-  }
-  
-  .fa-search {
-    position: absolute;
-    font-size: 24px;
-    left: 24px;
-  }
-  
-  .fa-cog {
-    color: rgb(29, 161, 242);
-    margin: 0 13px 0 36px;
-    font-size: 28px;
-  }
-  
-  .wd-explore-tab-collection {
-    display: flex;
-    justify-content: space-between;
-    border-bottom: 2px solid rgb(110, 118, 125);
-  }
-  
-  .wd-explore-tab {
-    font-size: 16px;
-    padding: 16px;
-    text-decoration: none;
-    font-weight: 900;
-    color: rgb(110, 118, 125);
-  }
-  
-  .wd-defaultTab-selected {
-    color: rgb(29, 161, 242);
-    border-bottom: 4px solid rgb(29, 161, 242);
-  }
-  
-  .wd-gap {
-    height: 15px;
-    border-top: 1px solid rgb(122, 127, 132);
-    background-color: rgb(49, 47, 47);
-    border-bottom: 3px solid rgb(122, 127, 132);
-  }
-  
-  .wd-article {
-    padding: 20px 0 20px 10px;
-    border-bottom: 1px solid rgb(110, 118, 125);
-  }
-  
-  .wd-topic {
-    font-size: 14px;
-    color: rgb(110, 118, 125);
-  }
-  
-  .wd-tweet-count {
-    font-size: 14px;
-    color: rgb(110, 118, 125);
-  }
-  .wd-article-title {
-    font-size: 19px;
-    margin: 5px 0 5px 0;
-    color: white;
-  }
-  .wd-open-article {
-    color: white;
-    float: right;
-    padding-right: 16px;
-    font-size: 20px;
-    cursor: pointer;
-  }
-  
-  .wd-open-topic {
-    color: rgb(110, 118, 125);
-    float: right;
-    padding-right: 16px;
-    font-size: 20px;
-    cursor: pointer;
-  }
-  .wd-article-image {
-    height: 100px;
-    width: 100px;
-    margin-right: 16px;
-    border-radius: 25px;
-  }
-  .wd-official-handle-name {
-    color: white;
-    font-size: 14px;
-    font-weight: bolder;
-  }
-  .wd-article-image-container {
-    display: flex;
-    justify-content: space-between;
-  }
+  /* How to keep this dynamic */
+  height: 40px;
+
+  width: 90%;
+  background-color: #EAEDED;
+  border-radius: 20px;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.search-bar input {
+  flex: 1;
+  height: 100%;
+  border: none;
+  background-color: transparent;
+  outline: none;
+  font-size: 20px;
+}
+
+.search-bar i {
+  margin-right: 10px;
+  color: #000;
+}
+
+.button {
+  background-color: transparent;
+  border: transparent;
+  outline: none;
+  color: #000;
+  cursor: pointer;
+  padding-left: 40px;
+  font-size: 20px;
+}
+
+.explore-tabs {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  width: 100%;
+}
+
+.explore-tab {
+  position: relative;
+  margin-right: 10px;
+  cursor: pointer;
+  width: 20%;
+  color: #666;
+}
+
+.explore-tab label {
+  display: inline-block;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 15px;
+  font-weight: bold;
+}
+
+.explore-tab .checked-tab {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 78%;
+  height: 3px;
+  background-color: lightskyblue;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+.explore-tab input[type="radio"] {
+  display: none;
+}
+
+.explore-tab input[type="radio"]:checked+label {
+  color: black;
+}
+
+.explore-tab input[type="radio"]:checked+label .checked-tab {
+  transform: scaleX(1);
+}
+
+.explore-img {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+.explore-img img {
+  width: 100%;
+  height: 350px;
+}
+
+.explore-img-live-header {
+  position: absolute;
+  font-weight: lighter;
+  bottom: 40px;
+  left: 5px;
+  color: pink;
+  font-size:medium;
+}
+
+.explore-img-header{
+  position: absolute;
+  bottom: 5px;
+  left: 5px;
+  color: white;
+  font-weight: bolder;
+}
+
+.tuit-list {
+  list-style-type: none;
+  padding: 0;
+  background-color: #FBFCFC;
+  padding: 5px;
+  border: #999 solid 0.5px;
+}
+
+.tuit-list-item {
+  margin-bottom: 5px;
+  padding: 10px;
+}
+
+.tuit-list-item .tuit-list-item-title {
+  font-size: 15px;
+  color: #666;
+}
+
+.tuit-list-item .tuit-list-item-body {
+  font-weight: bold;
+  margin-bottom: 5px;   
+  font-size: 20px;
+}
+
+.tuit-list-item .tuit-list-item-title-more {
+  margin-bottom: 5px;
+  font-size: 20px;
+  position: relative;
+  float: right;
+}
+
+.tuit-list-item .tuit-list-item-footer {
+  font-size: 15px;
+  color: #666;
+}
+
+/* EXPLORE BOOTSTRAP */
+.main-div {
+  /* padding-top: 3%; */
+  padding: 1%;
+}
+
+.explore-search {
+  position: relative;
+  width: 85%;
+  border-color: lightgray;
+  border-radius: 1px;
+}
+
+.explore-search-icon {
+  position: relative;
+  margin-left: 3%;
+}
+
+.explore-tuit-img {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  padding-left: 5%;
+  padding-right: 5%;
+  border-radius: 20px;
+}
+
+.tuit-list-item-title {
+  font-size: 12px;
+  color: #666;
+}
+
+.tuit-list-item-body {
+  font-weight: bold;
+  margin-bottom: 5px;
+  font-size: 15px;
+}
+
+.tuit-list-item-footer {
+  font-size: 12px;
+  color: #666;
+}
+
+.explore-follow-sugg-pic {
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  object-fit: cover;
+}
+
+.explore-btn {
+  padding: 3%;
+  width: 100%;
+  font-size: 13px;
+  /* height: 70%; */
+}
+
+.fa-check-circle{ 
+  margin-left: 2px;
+  font-size: 15px;
+}
+
+.search-bar-bs {
+  padding-left: 2.375rem;
+  width: 80%;
+  background-color: white;
+}
+
+.form-control-feedback {
+  position: absolute;
+  z-index: 2;
+  display: block;
+  width: 2.375rem;
+  height: 2.375rem;
+  line-height: 2.375rem;
+  text-align: center;
+  pointer-events: none;
+}
+
+.wd-btn {
+  color: blue;
+  font-size: 25px;
+  padding: 0px;
+  padding-left: 10px;
+}

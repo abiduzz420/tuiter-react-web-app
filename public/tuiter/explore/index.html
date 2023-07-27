@@ -1,100 +1,214 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-      integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-
-    <title>Explore</title>
-
-    <link rel="stylesheet" href="index.css" />
-  </head>
-  <body>
-    <br />
-    <!-- The Input Area -->
-    <div class="wd-top-container">
-      <i class="fa fa-search"> </i>
-      <input type="text" placeholder="Search Tuiter" class="wd-search-bar" />
-      <a href=""><i class="fa fa-cog" aria-hidden="true"></i></a>
-    </div>
-    <!-- Tabs -->
-    <div class="wd-explore-tab-collection">
-      <a class="wd-explore-tab wd-defaultTab-selected" href="">For You</a>
-      <a class="wd-explore-tab" href="">Trending</a>
-      <a class="wd-explore-tab" href="">Pop Culture</a>
-      <a class="wd-explore-tab" href="">News</a>
-      <a class="wd-explore-tab" href="">Sports</a>
-      <a class="wd-explore-tab" href="">Entertainment</a>
-    </div>
-    <div class="wd-gap"></div>
-    <!-- Stories -->
-    <div class="wd-article">
-      <div class="wd-topic">
-        Trending in Science
-        <span class="wd-open-topic">...</span>
-      </div>
-      <div class="wd-article-title">Starship</div>
-      <div class="wd-tweet-count">55.5k Tweets</div>
-    </div>
-    <div class="wd-article">
-      <div class="wd-topic">
-        Sports . Trending<span class="wd-open-topic">...</span>
-      </div>
-      <div class="wd-article-title">Joe Rogan</div>
-      <div class="wd-tweet-count">5,218 Tweets</div>
-    </div>
-
-    <div class="wd-article wd-article-image-container">
-      <div>
-        <span class="wd-official-handle-name"> 🗞️ The Daily Bugle ☑️</span>
-        <span class="wd-topic"> &#183; Yesterday</span>
-        <div class="wd-article-title">
-          John Stewart Hosting the Daily Show
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tuiter - Explore</title>
+    <link href="../../vendors/fontawesome/css/all.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../../vendors/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="main-div">
+        <div class="row">
+            <div class="col-xxl-1 col-xl-2 col-lg-1 col-md-2 col-sm-2"></div>
+            <div class="col-2 col-xxl-2 col-xl-1 col-lg-1 col-md-1 col-sm-1">
+                <div class="list-group">
+                    <a href="#" class="list-group-item list-group-item-action" aria-current="true">
+                        <i class="fab fa-twitter"></i> <span class="d-none d-xl-inline-block">Tuiter</span>
+                    </a>
+                    <a href="../home.html" class="list-group-item list-group-item-action" aria-current="true">
+                        <i class="fas fa-home"></i> <span class="d-none d-xl-inline-block">Home</span>
+                    </a>
+                    <a href="explore-css.html" class="list-group-item list-group-item-action active" aria-current="true">
+                        <i class="fas fa-hashtag"></i> <span class="d-none d-xl-inline-block">Explore</span>
+                    </a>
+                    <a href="../notifications.html" class="list-group-item list-group-item-action">
+                        <i class="fas fa-bell"></i> <span class="d-none d-xl-inline-block">Notifications</span>
+                    </a>
+                    <a href="../messages.html" class="list-group-item list-group-item-action">
+                        <i class="fas fa-envelope"></i> <span class="d-none d-xl-inline-block">Messages</span>
+                    </a>
+                    <a href="../bookmarks/bookmarks-css.html" class="list-group-item list-group-item-action">
+                        <i class="fas fa-bookmark"></i> <span class="d-none d-xl-inline-block">Bookmarks</span>
+                    </a>
+                    <a href="../lists.html" class="list-group-item list-group-item-action">
+                        <i class="fas fa-list"></i> <span class="d-none d-xl-inline-block">Lists</span>
+                    </a>
+                    <a href="../profile.html" class="list-group-item list-group-item-action">
+                        <i class="fas fa-user"></i> <span class="d-none d-xl-inline-block">Profile</span>
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action">
+                        <i class="fas fa-ellipsis-h"></i> <span class="d-none d-xl-inline-block">More</span>
+                    </a>
+                </div>
+                <br>
+                <button type="button" class="explore-btn btn btn-primary rounded-pill">Tweet</button>
+            </div>
+            <div class="col-7 col-xxl-5 col-xl-5 col-lg-6 col-md-7 col-sm-7">
+                <form>
+                    <div class="input-group">
+                        <span class="input-group-addon">
+                            <span class="fa fa-search form-control-feedback"></span>
+                        </span>
+                        <input type="text" class="form-control search-bar-bs rounded-pill" placeholder="Search Tuiter">
+                        <span class="input-group-btn">
+                            <button class="btn btn" type="button">
+                                <i class="fa fa-cog"></i>
+                            </button>
+                        </span>
+                    </div>
+                </form>
+                <br>
+                <ul class="nav nav-tabs">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">For you</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Trending</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">News</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Sports</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Entertainment</a>
+                    </li>
+                </ul>
+                <div class="explore-img">
+                    <img src="../images/starship.jpeg" alt="">
+                    <h1 class="explore-img-header"> Space X Starship</h1>
+                </div>
+                <ul class="list-group">
+                    <li class="list-group-item tuit-list">
+                        <div class="row">
+                            <div class="col-9">
+                                <div class="tuit-list-item-title">
+                                    <span>Trending in News</span>
+                                </div>
+                                <span class="tuit-list-item-body">The Daily Bugle <i class="fas fa-check-circle"></i></span>
+                                <span class="tuit-list-item-title"> 3h</span>
+                                <div class="tuit-list-item-body">John Stewart Hosting the Daily Show
+                                </div>
+                            </div>
+                            <div class="col-3 d-flex align-items-center justify-content-center">
+                                <img class="explore-tuit-img" src="../images/dailyshow.jpg" alt="">
+                            </div>
+                        </div>                   
+                    </li>
+                    <li class="list-group-item tuit-list">
+                        <div class="row">
+                            <div class="col-9">
+                                <span class="tuit-list-item-body">Pop Culture <i class="fas fa-check-circle"></i></span>
+                                <span class="tuit-list-item-title"> Yesterday</span>
+                                <div class="tuit-list-item-body">Latest news in Pop Culture
+                                </div>
+                                <div class="tuit-list-item-footer">
+                                    <span>11K Tweets</span>
+                                </div>
+                            </div>
+                            <div class="col-3 d-flex align-items-center justify-content-center">
+                                <img class="explore-tuit-img" src="../images/spider.png" alt="">
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item tuit-list">
+                        <div class="row">
+                            <div class="col-9">
+                                <div class="tuit-list-item-title">Games Magazine</div>
+                                <span class="tuit-list-item-body">Mario</span>
+                                <div class="tuit-list-item-footer">
+                                    <div class="tuit-list-item-body">The new Mario game is releasing this week
+                                    </div>
+                                    <span>5256 Tweets</span>
+                                </div>
+                            </div>
+                            <div class="col-3 d-flex align-items-center justify-content-center">
+                                <img class="explore-tuit-img" src="../images/mario.png" alt="">
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-3 col-xxl-3 col-xl-3 col-lg-3 d-none d-lg-block">
+                <ul class="list-group">
+                    <li class="list-group-item"><b>Who to Follow</b></li>
+                    <li class="list-group-item">
+                        <div class="row">
+                            <div class="col-2">
+                                <img class="explore-follow-sugg-pic" src="../images/java.jpg" alt="">
+                            </div>
+                            <div class="col-7">
+                                <div>Java <i class="fas fa-check-circle"></i></div>
+                                <div>@Java</div>
+                            </div>
+                            <div class="col-3">
+                                <button type="button" class="explore-btn btn btn-primary rounded-pill">Follow</button>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="row">
+                            <div class="col-2">
+                                <img class="explore-follow-sugg-pic" src="../images/relativity.png" alt="">
+                            </div>
+                            <div class="col-7">
+                                <div>Relativitiy Space <i class="fas fa-check-circle"></i></div>
+                                <div>@relativityspace</div>
+                            </div>
+                            <div class="col-3">
+                                <button type="button" class="explore-btn btn btn-primary rounded-pill">Follow</button>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="row">
+                            <div class="col-2">
+                                <img class="explore-follow-sugg-pic" src="../images/virgin.png" alt="">
+                            </div>
+                            <div class="col-7">
+                                <div>Virgin Galactic <i class="fas fa-check-circle"></i></div>
+                                <div>@virgingalactic</div>
+                            </div>
+                            <div class="col-3">
+                                <button type="button" class="explore-btn btn btn-primary rounded-pill">Follow</button>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="row">
+                            <div class="col-2">
+                                <img class="explore-follow-sugg-pic" src="../images/nasa.webp" alt="">
+                            </div>
+                            <div class="col-7">
+                                <div>NASA <i class="fas fa-check-circle"></i></div>
+                                <div>@NASA</div>
+                            </div>
+                            <div class="col-3">
+                                <button type="button" class="explore-btn btn btn-primary rounded-pill">Follow</button>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="row">
+                            <div class="col-2">
+                                <img class="explore-follow-sugg-pic" src="../images/tesla.png" alt="">
+                            </div>
+                            <div class="col-7">
+                                <div>Tesla <i class="fas fa-check-circle"></i></div>
+                                <div>@Tesla</div>
+                            </div>
+                            <div class="col-3">
+                                <button type="button" class="explore-btn btn btn-primary rounded-pill">Follow</button>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-xxl-1 col-xl-1 col-lg-1 col-md-2 col-sm-2"></div>
         </div>
-      </div>
-      <div>
-        <img class="wd-article-image" src="../images/dailyshow.jpg" />
-      </div>
     </div>
-
-    <div class="wd-article wd-article-image-container">
-      <div>
-        <div class="wd-topic">Pop Culture &#183;</div>
-        <div class="wd-article-title">
-          Latest news in Pop Culture
-        </div>
-      </div>
-      <div>
-        <img class="wd-article-image" src="../images/spider.png" />
-      </div>
-    </div>
-
-    <div class="wd-article wd-article-image-container">
-      <div>
-        <span class="wd-official-handle-name"> 🏦 Games Magazine ☑️</span>
-        <span class="wd-topic"> &#183; Yesterday</span>
-        <div class="wd-article-title">
-          The new Mario game is releasing this week
-        </div>
-      </div>
-      <div>
-        <img class="wd-article-image" src="../images/mario.png" />
-      </div>
-    </div>
-    <div class="wd-article">
-      <div class="wd-topic">
-        Trending in United States
-        <span class="wd-open-topic">...</span>
-      </div>
-      <div class="wd-article-title">Wonder Bread</div>
-      <div class="wd-tweet-count">1,259 Tweets</div>
-    </div>
-  </body>
+</body>
 </html>
