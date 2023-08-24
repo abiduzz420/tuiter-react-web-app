@@ -1,0 +1,239 @@
+.search-form {
+  display: flex;
+  align-items: center;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  
+  /* How to keep this dynamic */
+  height: 40px;
+
+  width: 90%;
+  background-color: #EAEDED;
+  border-radius: 20px;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.search-bar input {
+  flex: 1;
+  height: 100%;
+  border: none;
+  background-color: transparent;
+  outline: none;
+  font-size: 20px;
+}
+
+.search-bar i {
+  margin-right: 10px;
+  color: #000;
+}
+
+.button {
+  background-color: transparent;
+  border: transparent;
+  outline: none;
+  color: #000;
+  cursor: pointer;
+  padding-left: 40px;
+  font-size: 20px;
+}
+
+.explore-tabs {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  width: 100%;
+}
+
+.explore-tab {
+  position: relative;
+  margin-right: 10px;
+  cursor: pointer;
+  width: 20%;
+  color: #666;
+}
+
+.explore-tab label {
+  display: inline-block;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 15px;
+  font-weight: bold;
+}
+
+.explore-tab .checked-tab {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 78%;
+  height: 3px;
+  background-color: lightskyblue;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+.explore-tab input[type="radio"] {
+  display: none;
+}
+
+.explore-tab input[type="radio"]:checked+label {
+  color: black;
+}
+
+.explore-tab input[type="radio"]:checked+label .checked-tab {
+  transform: scaleX(1);
+}
+
+.explore-img {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+.explore-img img {
+  width: 100%;
+  height: 350px;
+}
+
+.explore-img-live-header {
+  position: absolute;
+  font-weight: lighter;
+  bottom: 40px;
+  left: 5px;
+  color: pink;
+  font-size:medium;
+}
+
+.explore-img-header{
+  position: absolute;
+  bottom: 5px;
+  left: 5px;
+  color: white;
+  font-weight: bolder;
+}
+
+.tuit-list {
+  list-style-type: none;
+  padding: 0;
+  background-color: #FBFCFC;
+  padding: 5px;
+  border: #999 solid 0.5px;
+}
+
+.tuit-list-item {
+  margin-bottom: 5px;
+  padding: 10px;
+}
+
+.tuit-list-item .tuit-list-item-title {
+  font-size: 15px;
+  color: #666;
+}
+
+.tuit-list-item .tuit-list-item-body {
+  font-weight: bold;
+  margin-bottom: 5px;   
+  font-size: 20px;
+}
+
+.tuit-list-item .tuit-list-item-title-more {
+  margin-bottom: 5px;
+  font-size: 20px;
+  position: relative;
+  float: right;
+}
+
+.tuit-list-item .tuit-list-item-footer {
+  font-size: 15px;
+  color: #666;
+}
+
+/* EXPLORE BOOTSTRAP */
+.main-div {
+  /* padding-top: 3%; */
+  padding: 1%;
+}
+
+.explore-search {
+  position: relative;
+  width: 85%;
+  border-color: lightgray;
+  border-radius: 1px;
+}
+
+.explore-search-icon {
+  position: relative;
+  margin-left: 3%;
+}
+
+.explore-tuit-img {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  padding-left: 5%;
+  padding-right: 5%;
+  border-radius: 20px;
+}
+
+.tuit-list-item-title {
+  font-size: 12px;
+  color: #666;
+}
+
+.tuit-list-item-body {
+  font-weight: bold;
+  margin-bottom: 5px;
+  font-size: 15px;
+}
+
+.tuit-list-item-footer {
+  font-size: 12px;
+  color: #666;
+}
+
+.explore-follow-sugg-pic {
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  object-fit: cover;
+}
+
+.explore-btn {
+  padding: 3%;
+  width: 100%;
+  font-size: 13px;
+  /* height: 70%; */
+}
+
+.fa-check-circle{ 
+  margin-left: 2px;
+  font-size: 15px;
+}
+
+.search-bar-bs {
+  padding-left: 2.375rem;
+  width: 80%;
+  background-color: white;
+}
+
+.form-control-feedback {
+  position: absolute;
+  z-index: 2;
+  display: block;
+  width: 2.375rem;
+  height: 2.375rem;
+  line-height: 2.375rem;
+  text-align: center;
+  pointer-events: none;
+}
+
+.wd-btn {
+  color: blue;
+  font-size: 25px;
+  padding: 0px;
+  padding-left: 10px;
+}
