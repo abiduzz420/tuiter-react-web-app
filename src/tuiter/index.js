@@ -10,16 +10,26 @@ import ProfileTab from "./profile-section";
 import MoreTab from "./more-section";
 import ListsTab from "./lists-page";
 import FollowList from "./follow-list";
+import whoReducer from "./reducers/who-reducer";
+import { configureStore } from '@reduxjs/toolkit';
+import {Provider} from "react-redux";
+import tuitsReducer from "./reducers/tuits-reducer";
+import tuitDetailsReducer from "./reducers/tuit-details-reducer";
+import "./index.css"
+
+const store = configureStore(
+  {reducer: {who: whoReducer, tuits: tuitsReducer, tuitDetails: tuitDetailsReducer}});
 
 function Tuiter() {
  return (
+   <Provider store={store}>
    <div>
      <NavigationBar />
      <div className="row">
-       <div className="col-2">
+       <div className="col-xxl-2 col-xl-2 col-lg-1 col-md-1 col-sm-1">
          <NavigationSideBar />
        </div>
-       <div className="col-7">
+       <div className="col-xxl-7 col-xl-7 col-lg-8 col-md-11 col-sm-11">
          <Routes>
            <Route path="/home" element={<HomeTab/>} />
            <Route path="/explore" element={<ExplorePage />} />
@@ -31,11 +41,12 @@ function Tuiter() {
             <Route path="/more" element={<MoreTab/>}/>
          </Routes>
        </div>
-       <div className="col-3">
+       <div className="col-xxl-3 col-xl-3 col-lg-3 d-none d-lg-block">
           <FollowList/>
        </div>
      </div>
    </div>
+   </Provider>
  );
 }
 export default Tuiter;

@@ -1,6 +1,5 @@
 import React from "react";
 import TuitsList from "../tuit-list";
-import "./index.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "font-awesome/css/font-awesome.min.css";
 import { AiOutlineSearch } from "react-icons/ai";

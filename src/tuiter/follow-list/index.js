@@ -1,8 +1,9 @@
 import React from "react";
-import whoArray from './who.json';
+import {useSelector} from "react-redux";
 import FollowListItems from "./follow-items";
 
 const FollowList = () => {
+  const whoArray = useSelector((state) => state.who);
  return(
    <ul className="list-group">
      <li className="list-group-item">

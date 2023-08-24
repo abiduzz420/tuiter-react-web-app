@@ -1,0 +1,20 @@
+[
+ {
+   "_id": 123,
+   "userName": "ISRO",
+   "handle": "ISRO",
+   "avatarIcon": "/images/isro.png"
+ },
+ {
+   "_id": 234,
+   "userName": "Tesla",
+   "handle": "tesla",
+   "avatarIcon": "/images/tesla.jpg"
+ },
+ {
+   "_id": 345,
+   "userName": "SpaceX",
+   "handle": "SpaceX",
+   "avatarIcon": "/images/falcon.jpg"
+ }
+]
