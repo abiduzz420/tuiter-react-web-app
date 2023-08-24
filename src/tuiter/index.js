@@ -6,9 +6,12 @@ import ExplorePage from "./explore-page";
 import BookmarksTab from "./bookmarks";
 import NotificationsTab from "./notifications-tab";
 import MessagesTab from "./messages-tab";
-import ProfileTab from "./profile-section";
 import MoreTab from "./more-section";
 import ListsTab from "./lists-page";
+import LoginTab from "./user/Login-tab";
+import RegisterTab from "./user/Register-tab";
+import authReducer from "./reducers/auth-reducer";
+import ProfileTab from "./user/Profile-tab";
 import FollowList from "./follow-list";
 import whoReducer from "./reducers/who-reducer";
 import { configureStore } from '@reduxjs/toolkit';
@@ -17,8 +20,9 @@ import tuitsReducer from "./reducers/tuits-reducer";
 import tuitDetailsReducer from "./reducers/tuit-details-reducer";
 import "./index.css"
 
+
 const store = configureStore(
-  {reducer: {who: whoReducer, tuits: tuitsReducer, tuitDetails: tuitDetailsReducer}});
+  {reducer: {who: whoReducer, tuits: tuitsReducer, tuitDetails: tuitDetailsReducer, user: authReducer}});
 
 function Tuiter() {
  return (
@@ -39,6 +43,8 @@ function Tuiter() {
             <Route path="/lists" element={<ListsTab/>}/>
             <Route path="/profile" element={<ProfileTab/>}/>
             <Route path="/more" element={<MoreTab/>}/>
+            <Route path="/login"    element={<LoginTab    />} />
+            <Route path="/register" element={<RegisterTab />} />
          </Routes>
        </div>
        <div className="col-xxl-3 col-xl-3 col-lg-3 d-none d-lg-block">

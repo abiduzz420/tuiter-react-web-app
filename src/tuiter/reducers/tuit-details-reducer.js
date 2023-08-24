@@ -1,10 +1,10 @@
 import { createSlice } from "@reduxjs/toolkit";
-import tuitDetails from './tuit-details.json';
+import {updateTuitThunk, createTuitThunk, deleteTuitThunk, findTuitsThunk} from "../services/tuits-thunks";
 
 const currentUser = {
- "userName": "NASA",
+ "username": "NASA",
  "handle": "@nasa",
- "image": "/images/nasa.png",
+ "image": "nasa.png",
 };
 
 const templateTuit = {
@@ -18,23 +18,42 @@ const templateTuit = {
 }
 
 const tuitDetailsSlice = createSlice({
- name: 'tuitDetails',
- initialState: {tuitsArray: tuitDetails},
- reducers: {
-  deleteTuit(state, action) {
-     const index = state.tuitsArray.findIndex(tuitsArray =>
-           tuitsArray._id === action.payload);
-     state.tuitsArray.splice(index, 1);
-   },
-   createTuit(state, action) {
-     state.tuitsArray.unshift({
-       ...action.payload,
-       ...templateTuit,
-       _id: (new Date()).getTime(),
-     })
+ name: 'tuitDetailsArray',
+ initialState: {tuitDetailsArray: [], loading: false},
+ extraReducers: {
+     [createTuitThunk.fulfilled]:
+      (state, { payload }) => {
+        state.loading = false
+        state.tuitDetailsArray.push(payload)
+    },
+    [updateTuitThunk.fulfilled]:
+      (state, { payload }) => {
+        state.loading = false
+        const tuitNdx = state.tuitDetailsArray.findIndex((t) => t._id === payload._id)
+        state.tuitDetailsArray[tuitNdx] = { ...state.tuitDetailsArray[tuitNdx], ...payload }
+    },
+    [deleteTuitThunk.fulfilled] :
+      (state, { payload }) => {
+      state.loading = false
+      state.tuitDetailsArray = state.tuitDetailsArray .filter(t => t._id !== payload)
+    },
+
+   [findTuitsThunk.pending]:
+      (state) => {
+         state.loading = true
+         state.tuitDetailsArray = [] },
+   [findTuitsThunk.fulfilled]:
+      (state, { payload }) => {
+         state.loading = false
+         state.tuitDetailsArray = payload },
+   [findTuitsThunk.rejected]:
+      (state, action) => {
+         state.loading = false
+         state.error = action.error
    }
- }
+ },
+
+ reducers: {}
 });
 
-export const {createTuit, deleteTuit} = tuitDetailsSlice.actions;
 export default tuitDetailsSlice.reducer;

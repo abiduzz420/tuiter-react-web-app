@@ -1,17 +1,34 @@
 import React, { useState } from "react";
+import { updateTuitThunk } from "../services/tuits-thunks";
+import { useDispatch } from "react-redux";
+
 
 const TuitStats = ({ tuitDetails }) => {
-    const [isLiked, setIsLiked] = useState(false);
-    const [likesCount, setLikesCount] = useState(tuitDetails.likes);
+    const dispatch = useDispatch();
 
-    const handleButtonClick = () => {
-        if (isLiked) {
-        setLikesCount((likesCount) => likesCount - 1);
+    const handleLikeButtonClick = () => {
+        if (!tuitDetails.liked) {
+
+            dispatch(updateTuitThunk({ ...tuitDetails, likes: tuitDetails.likes + 1, liked: true}));
+
         } else {
-        setLikesCount((likesCount) => likesCount + 1);
-        }
 
-        setIsLiked((isLiked) => !isLiked);
+            dispatch(updateTuitThunk({ ...tuitDetails, likes: tuitDetails.likes - 1, liked: false}));
+
+        }
+    };
+
+    const handleDislikeButtonClick = () => {
+        if (!tuitDetails.disliked) {
+
+            dispatch(updateTuitThunk({ ...tuitDetails, dislikes: tuitDetails.dislikes + 1, disliked: true}));
+
+        } else {
+
+             dispatch(updateTuitThunk({ ...tuitDetails, dislikes: tuitDetails.dislikes - 1, disliked: false}));
+
+
+        }
     };
 
     return (
@@ -26,13 +43,17 @@ const TuitStats = ({ tuitDetails }) => {
             <span className="d-none d-lg-inline-block">{tuitDetails.retuits}</span>
             </div>
             <div className="col-2">
-            <button className="btn" onClick={handleButtonClick}><i className={`fa fa-heart ${isLiked ? "text-danger" : ""}`}></i></button>
-            <span className="d-none d-lg-inline-block">{likesCount}</span>
+            <button className="btn" onClick={handleLikeButtonClick}><i className={`fa fa-heart ${tuitDetails.liked ? "text-primary" : ""}`}></i></button>
+            <span className="d-none d-lg-inline-block">{tuitDetails.likes}</span>
+            </div>
+            <div className="col-2">
+                <button className="btn" onClick={handleDislikeButtonClick}><i className={`fa fa-thumbs-down ${tuitDetails.disliked ? "text-danger" : ""}`}></i></button>
+                <span className="d-none d-lg-inline-block">{tuitDetails.dislikes}</span>
             </div>
             <div className="col-2">
             <button className="btn"><i className="fa fa-upload"></i></button>
             </div>
-            <div className="col-2"></div>
+
         </div>
     );
 }
