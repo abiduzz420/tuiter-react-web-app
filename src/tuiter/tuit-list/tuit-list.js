@@ -6,12 +6,11 @@ import "font-awesome/css/font-awesome.min.css";
 const TuitItems = (
  {
    tuit = {
-     "topic": "Space",
-     "userName": "SpaceX",
-     "time": "3h",
-     "title": `Tesla CyberTruck lands on Mars and
-               picks up the Curiosity rover on its 6' bed`,
-     "image": "tesla.jpg"
+     "topic": "ISRO",
+     "userName": "ISRO",
+     "time": "2h",
+     "title": `Watch: How Chandrayaan-3's Lander Vikram Saw Moon Just Before Touchdown`,
+     "image": "isro.png"
    }
  }
 ) => {

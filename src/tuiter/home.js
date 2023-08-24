@@ -1,4 +1,4 @@
-function HomeScreen() {
+function HomeTab() {
  return <h1>Home</h1>;
 }
-export default HomeScreen;
+export default HomeTab;
