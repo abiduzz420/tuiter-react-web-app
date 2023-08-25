@@ -2,9 +2,9 @@ import { createSlice } from "@reduxjs/toolkit";
 import {updateTuitThunk, createTuitThunk, deleteTuitThunk, findTuitsThunk} from "../services/tuits-thunks";
 
 const currentUser = {
- "username": "NASA",
- "handle": "@nasa",
- "image": "nasa.png",
+ "username": "ISRO",
+ "handle": "@isro",
+ "image": "isro.png",
 };
 
 const templateTuit = {
